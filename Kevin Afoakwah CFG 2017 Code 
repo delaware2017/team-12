@@ -1,0 +1,13 @@
+#
+from __future__ import unicode_literals
+
+from django.db import models
+
+# Create Models here
+class Nominee(models.Model):
+    first_name = models.CharField(max_length = 100, null = false, blank = false)
+    last_name = models.CharField(max_length = 100, null = false, blank = false)
+    email = models.CharField(max_length = 100, null = false, blank = false)
+    phone = models.IntegerField(max_length = 100, null = false, blank = false)
+    hispanic = BooleanField()
+    athletics = 
