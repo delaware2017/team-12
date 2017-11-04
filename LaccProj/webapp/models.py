@@ -13,7 +13,11 @@ class Nominee(models.Model):
     athletics = models.BooleanField()
     if (athletics):
      certificates = models.CharField(max_length=100, null=False, blank=False)
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> b1ce259131a2d0e5493ec3dd5d37587b3397d001
 
     STEM = models.BooleanField()
     arts = models.BooleanField()

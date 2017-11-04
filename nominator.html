@@ -1,0 +1,111 @@
+<div id="app">
+  <h2>VueFormular Demo <button class='btn btn-default' @click='resetForm()'>Reset Form</button></h2>
+  
+  <vf-form ajax 
+           action="/echo/json" 
+           method="POST" 
+           :validation="validation"
+           v-ref:form>
+
+    <vf-status-bar></vf-status-bar>
+   
+   <vf-text     
+   label="First name"      
+   placeholder="Your name" 
+   name="first_name"  
+   v-ref:first_name 
+   lazy></vf-text>
+   
+   <vf-text     
+   label="Last name"      
+   placeholder="Your name" 
+   name="last_name"  
+   v-ref:last_name 
+   lazy></vf-text>
+   
+    <vf-number label="Age" 
+               name="age" 
+               v-ref:age>
+      <i slot="afterField">
+      Try to enter an invalid age
+    </i>
+    </vf-number>
+    
+    <vf-number label="Smaller than age" 
+               name="smaller_than_age" 
+               v-ref:smaller_than_age>
+      <i slot="afterField">
+      Try to enter an value greater than the Age field
+    </i>
+    </vf-number>
+    
+    <vf-date name="birth_date"
+             v-ref:birth_date 
+             value="1990-02-03" 
+             label="Birth Date" 
+             no-input></vf-date>
+
+    <vf-date name="graduation_date" 
+             v-ref:graduation_date 
+             label="Graduation Date"></vf-date>
+             
+               
+    <vf-file label="Upload file"
+             name="upload_file" 
+             v-ref:upload_file></vf-file>
+             
+    <vf-password 
+    label="Password" 
+    name="password" 
+    v-ref:password>
+    </vf-password>
+    
+    <vf-email label="Email" 
+              name="email" 
+              v-ref:email></vf-email>
+              
+    <vf-textarea tinymce 
+    label="About yourself" 
+    placeholder="Something about yourself" 
+    name="about" 
+    v-ref:about></vf-textarea>
+    
+    <vf-select name="pet" 
+               v-ref:pet 
+               label="Favorite pet" 
+              :items="pets"></vf-select>
+              
+    <vf-select multiple 
+               select2 
+               name="motorbike" 
+               v-ref:motorbike 
+               label="Motorbikes" 
+               :items="motorbikes" 
+               :value="[2,3]"></vf-select>
+               
+    <vf-buttons-list name="car"   
+                     v-ref:car 
+                     label="Car" 
+                    :items="cars">
+                    </vf-buttons-list>
+                    
+    <vf-buttons-list multiple 
+                    name="fruit" 
+                    v-ref:fruit 
+                    label="Fruit" 
+                    :items="fruits"></vf-buttons-list>
+                    
+    <vf-checkbox label="Are you married?"   
+                 name="married" 
+                 v-ref:married></vf-checkbox>
+    
+    <vf-number name="married_years" 
+               v-ref:married_years 
+               label="For how many years?"></vf-number>
+   
+    <vf-submit></vf-submit>
+    
+  </vf-form>
+
+
+</div>
