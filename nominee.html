@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8" />
+   <!-- Student Nominee Sign-Up Title -->
+   <title>Sign Up - Student Nominee</title>
+   <link rel='stylesheet' href="a3.css" type='text/css' media='screen'>
+   <script src='a3.js'></script>
+   <script type="text/javascript" src='top-level-domain-names.js'> </script>
+
+
+</head>
+<body onload="aboutCountries()">
+  <form name="form1" id="formid" action="https://formpost.azurewebsites.net/home/test" method="post" onsubmit='return formValidationExample();' autocomplete="on">
+
+    <!-- Student Nominee Header -->
+       <section class="header">
+		<h1>The Hispanic Student Recognition Program
+
+</h1>
+	   </section>
+
+	   <section class="margin">
+	   <section class="head2">
+		<h2>Apply as a Nominated Student</h2>
+	   </section>
+
+	   <section class="head3">
+		<h3>*Required information</h3>
+	   </section>
+
+	   <div>
+	   <p>Student - Nominee Basic Information</p>
+
+
+				<label class="label" for="fname" title="Free format">First Name<span>*</span></label>
+				<input class="input" type="text" name="fname" id="fname" required="required" onchange='vFname();' /><br>
+				<div class="error" id="erfname"></div><br />
+
+
+				<label class="label" for="lname" title="Free format">Last Name<span>*</span></label>
+				<input class="input" type="text" name="lname" id="lname" required="required" onchange='vLname();'/><br>
+				<div class="error" id="erlname"></div><br />
+
+
+				<label class="label" for="email" title="Free format">Email <span>*</span></label>
+				<input class="input" type="email" name="email" id="email" required="required" autofocus onchange='vEmail();'/><br>
+				<div class="error" id="eremail"></div><br />
+
+        <label class="label" for="phone" title="name must be number only">Phone Number<span>*</span></label>
+				<input class="input" type="tel" name="phone" id="phone" required="required" placeholder="999-999-9999" onchange='vPhone();'/><br>
+				<div class="error" id="erphone"></div><br />
+
+
+		   <p> Do you consider yourself Hispanic/Latino? </p>
+		   <input type="radio" name="yah" value="jaa"> Yes<br>
+  <input type="radio" name="yahe" value="nah"> No<br>
+
+        <br>
+       <div class="top">
+				<label class="label" for="whyhisp" title="Free format">Why/Why not?</label>
+				<textarea  name="whyhisp" id="whyhisp" cols="20" rows="10" ></textarea><br>
+				<div class="error" id="ertextarea"></div><br/>
+				</div>
+				<br><hr>
+				<label class="label" for="nomlevel" title="Free format"><p>Award Category Nominated For</p><span>*</span></label>
+				<select name="nomlevel" id="nomlevel" size=1  >
+					<option value="0" selected>&dash;select&dash;</option>
+					<option value="1">Academics</option>
+					<option value="2">Arts</option>
+					<option value="3">Science/Techology</option>
+					<option value="4">Community Service</option>
+					<option value="5">Athletics</option>
+				</select></br>
+			   <hr>
+        <h3> Personal Essay <h3>
+		    <h4> All applicants, regardless of nomination category, are required to respond to one of the following essays. The response is limited to 7500 characters. Criteria for judging the statements include:
+				<ul>
+        <li>grammar, spelling and sentence structure</li>
+        <li>clear theme or topic</li>
+        <li>supporting details</li>
+        <li>personal or people impact</li>
+        <li>effective use of words</li>
+        <li>organization of thoughts</li>
+        <li>relevant content and examples</li>
+        <li>strong introduction and conclusion</li>
+        </ul> </h4>
+        <h4> The essay choices are: </h4>
+        <ul>
+        <li> “If you, as a Hispanic person, decided to run for president, how would you convince America that you are a strong candidate?” What would be your platform for your campaign (i.e. values)? What do you think one of the biggest issues facing a new president would be?</li>
+<br><br><li>In many ways, schools are more segregated today than in past decades, and residential segregation is a fact of life in many areas. How can you, the student foster the respect for differences even when the school environment lacks diversity?</li>
+</ul>
+
+        <div class="top">
+				<label class="label" for="whyhisp" title="Free format">For best results, type your personal statement in your choice of text editor (example: Microsoft Word) and paste here. Maximum characters = 7500.</label>
+				<textarea  name="whyhisp" id="whyhisp" cols="70" rows="10" ></textarea><br>
+				<div class="error" id="ertextarea"></div><br/>
+				</div>
+			<hr>
+				<h3>Checklist of Required and Supporting Documents:</h3>
+<ul>
+		<li>Nominees must submit the appropriate attachments as listed below.</li>
+		<li> Documents may be scanned or sent as a graphic.</li>
+		<li>Upon submission of this application, please submit your videos, recordings, photos, projects, and/or portfolios here or as an email attachment to HSRP@thelatincenter.org in JPG or PDF format.</li>
+		<li>Be sure the email identified the name of the student and school.  If necessary, supporting documents may be sent by mail with the Supplemental Documents Form provided on the website.</li>
+
+<li> Please note all videos, recordings, photos and/or portfolios submitted become the property of the Latin American Community Center (LACC). The LACC reserves the right to use these submissions in any form, including but not limited to the agency website, agency publications and during the Hispanic Student Recognition Program ceremony.</li>
+		</ul>
+<br><br><br>
+		<p> All Nominees must submit: </p>
+
+<br>
+<input type="checkbox" id="resume" name="resucheck" value="resucheck">
+    <label for="resucheck">Resumé -   include a resume listing your achievements. Honors received could include trophies, plaques, and certificates. Activities could include extracurricular activities, community volunteer service hours, and any employment.</label>
+<br>
+<input type="checkbox" id="pers" name="perscheck" value="perscheck">
+    <label for="perscheck">Personal Statement – copy/paste to section above.</label>
+<br>
+<input type="checkbox" id="rep" name="repcard" value="repcard">
+    <label for="repcard">Report Card or transcript – most current complete year and semester.</label>
+		<br><br>
+
+<h3>Acceptable support materials for submission by award categories: You must provide a portfolio that demonstrates your achievement in the award categories. The following descriptions provide some relevant suggestions but you must present yourself as you deem most appropriate for the award.</h3>
+<br>
+		<ul>
+<li>Academics:  GPA (indicate weighted (4.0 or lower) or unweighted), class rank, standardized test scores (e.g. SAT, ACT), AP course listing and scores, honors course listing, honor society membership, academic awards, etc.
+</li>GPA:<input text="text" id="rep" name="GPAcard" value=""> </li>SAT/ACT Score(Add "," if taken multiple times):<input text="text" id="rep" name="GPAcard" value=""> </li>AP Courses Taken:<input text="text" id="rep" name="GPAcard" value=""> </li>Academic Awards:<input text="text" id="rep" name="GPAcard" value="">
+<br>
+			<li>Art:   Multiple submissions of your art (visual, performance, etc.) are required.</li>
+      <input text="text" id="rep" name="GPAcard" value="">
+      <input text="text" id="rep" name="GPAcard" value="">
+      <input text="text" id="rep" name="GPAcard" value=""><br>
+
+	-  VISUAL ARTS: All Visual Artwork (drawings, paintings, graphic art, photographs, etc.) must be either photographed and printed or submitted electronically.
+  <div>
+   <label class="label" for="attachments" title="Free format">Attach Documents Here ->:</label>
+   <input class="input" type="file" name="attachments" id="attachments" multiple><br>
+   <a href="#" class="add_another_file_link">
+            <i class="icon-add" aria-hidden="true"></i>
+          </i>
+            Add Another File
+          </a><br>
+  </div><br>
+	-  PERFORMING ARTS: Must submit a video clip or web link (e.g. YouTube), minimum length of 1 minute, and maximum length of 5 minutes. Examples of performing arts may include: Singing, Dancing, Acting, Musical Instruments, Spoken Word, etc.
+    <br>
+<label class="label" for="attachments" title="Free format">Attach Documents Here ->:</label>
+<input class="input" type="file" name="attachments" id="attachments" multiple><br> <br>or<br>
+<label class="label" for="attachments" title="Free format">Video Link (YouTube, Vimeo, Dailymotion, etc) -> </label>
+<input text="text" id="rep" name="URL link" value="">
+  <br>
+
+<li> Science/Technology: Multiple submissions of something related to science, technology, engineering, or math is required. Examples of previous submissions include: science projects, Computer Aided Design (CAD) architectural drawings, and awards in these fields.</li>
+<div>
+ <label class="label" for="attachments" title="Free format">Attach Documents Here ->:</label>
+ <input class="input" type="file" name="attachments" id="attachments" multiple><br>
+ </div>
+<li>Community Service: Provide statement regarding reason why place of community service was chosen. This can be submitted in the form of letters, certificates, awards, media clippings, recognitions, etc. Also, submit the additional form for Community Services Verification Form provided the website.</li>
+<div>
+ <label class="label" for="attachments" title="Free format">Attach Documents Here ->:</label>
+ <input class="input" type="file" name="attachments" id="attachments" multiple><br>
+ </div>
+<br>
+<li>Athletics:  Examples of document submissions might include: certificates of participation or accolades and letters of recommendation from coaches, newspaper clippings, pictures with trophies / awards, etc.</li>
+</h5>
+
+				<div>
+				 <label class="label" for="attachments" title="Free format">Attach Documents Here -> :</label>
+				 <input class="input" type="file" name="attachments" id="attachments" multiple><br><br>
+				</div>
+
+<hr>
+
+<h2> TERMS AND CONDITIONS </h2>
+</h4>All of the information that I have provided in this application and additional documents are accurate and complete to the best of my knowledge. I understand and acknowledge that providing false or misleading information may disqualify the nominee from being considered for HSRP awards. If you are under 18, your parent or guardian must also agree to the terms and conditions.</h4>
+<br> <br>
+<input type="checkbox" id="agreebox" name="agreebox" value="agreebox">
+    <label for="agreebox">Nominee/Student Accept</label> <br> <br>
+
+
+ <input type="text" id="parname" name="parname" value="Initial here">
+    <label for="parname">Parent/Guardian Name</label> <br> <br>
+
+<input type="checkbox" id="pagreebox" name="pagreebox" value="pagreebox">
+    <label for="agreebox">Parent Accept</label>
+
+
+
+
+
+				<section>
+				<input style="border:1px solid grey;border-radius:5px; background-color:red; width:60px; color:white;font-weight:bold;margin:1em 0 0 24em" type='reset' name="entry19" id="entry19" value='Clear'>&nbsp;&nbsp;
+				<input style="border:1px solid grey;border-radius:5px; background-color:red; width:150px; color:white;font-weight:bold;margin-top:1em" type='submit'  name="entry20" id="entry20" value='Submit Application'>
+				</section>
+				<br>
+
+
+	</section>
+			<div class="error" id="errors"></div><br />
+
+  <div style="text-align:center; font: 1em sans-serif">
+	<script type="text/javascript">
+	//<![CDATA[
+	var dt=new Date(document.lastModified); // Get document last modified date
+	document.write('This page was last updated on '+dt.toLocaleString())
+	//]]>
+	</script>
+	</div>
+	<br><br>
+	</form>
+
+</body>
+
+</html>
