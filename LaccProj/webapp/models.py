@@ -12,16 +12,16 @@ class Nominee(models.Model):
     gpa = models.CharField(max_length=4, null=False, default = " ",blank=False)
     number_of_AP_courses = models.IntegerField(default= 0,null=False, blank=False)
     Do_you_consider_yourself_hispanic = models.NullBooleanField(null=True)
-    athletics = models.BooleanField()
-    
+
     #ath = athletics.
     if (athletics == True):
      certificates = models.CharField(max_length=100, null=False, blank=False)
+
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
-        
+
 >>>>>>> b1ce259131a2d0e5493ec3dd5d37587b3397d001
 =======
 
@@ -31,7 +31,7 @@ class Nominee(models.Model):
 
     if (STEM == True):
         Any_Science_Projects_or_Awards_in_these_fields = models.CharField(max_length=200, null=False, blank=False)
-    
+
     arts = models.BooleanField()
 
     #if(arts == True):
