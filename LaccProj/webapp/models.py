@@ -5,14 +5,15 @@ from django.db import models
 
 # Create your models here.
 class Nominee(models.Model):
+    
     first_name = models.CharField(max_length=100, null=False, blank=False) #generates text box input for firstname
     last_name  = models.CharField(max_length=100, null=False, blank=False) #generates text box input for lastname
     email = models.CharField(max_length=100, null=False, blank=False) #generates text box for email
     phone = models.CharField(max_length=12, null=False, blank=False) #generates text box for phone number, limited to 12 characters
-    gpa = models.FloatField(default= 0.0, null=False ,blank=False) #generates text box to take an integer for GPA
+    gpa = models.FloatField(default= 0.0, null=False ,blank=False) #generates text box to take an float # (Ex. 3.21) for GPA
+    SAT_Scores = models.IntegerField(default=0, null=False, blank=False) #generates text box to take an integer 
     number_of_AP_courses = models.IntegerField(default= 0,null=False, blank=False) #generates text box to take an integer for # of AP courses
     Do_you_consider_yourself_hispanic = models.NullBooleanField(null=True) #generates drop down menu to select yes/no/unknown 
-
     athletics = models.BooleanField() #generates checkbox 
 
     #gpa_int = float(gpa)
