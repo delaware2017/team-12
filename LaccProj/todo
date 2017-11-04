@@ -1,0 +1,3 @@
+Get information to be stored in Django database server
+Separate the criteria filled out into categorical fields
+Be able to export this information for the graders to interpret and easily understand
