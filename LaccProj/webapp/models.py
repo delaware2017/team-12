@@ -39,6 +39,7 @@ class Nominee(models.Model):
     student_Accept = models.BooleanField() #generates checkbox
     Parent_or_Guardian_Name = models.CharField(max_length=50, null=False, blank=False) #generates text box for Parents/Guardians name
     Parent_or_guardian_accept = models.BooleanField() #generates checkbox
+    score = models.IntegerField(default =0, null=False, blank = False)
 
     def __str__(self):
         """this sets the default return for this object"""
