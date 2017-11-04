@@ -9,7 +9,7 @@ class Nominee(models.Model):
     last_name  = models.CharField(max_length=100, null=False, blank=False)
     email = models.CharField(max_length=100, null=False, blank=False)
     phone = models.CharField(max_length=12, null=False, blank=False)
-    gpa = models.CharField(max_length=4, null=False, default = " ",blank=False)
+    gpa = models.IntegerField(default= 0, null=False ,blank=False)
     number_of_AP_courses = models.IntegerField(default= 0,null=False, blank=False)
     Do_you_consider_yourself_hispanic = models.NullBooleanField(null=True)
     athletics = models.BooleanField()
