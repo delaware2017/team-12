@@ -13,6 +13,18 @@ class Nominee(models.Model):
     number_of_AP_courses = models.IntegerField(default= 0,null=False, blank=False)
     Do_you_consider_yourself_hispanic = models.NullBooleanField(null=True)
     athletics = models.BooleanField()
+
+    if gpa >= 3.91:
+        sum = 3
+    elif gpa >= 3.75:
+        sum = 2
+    elif gpa >= 3.5:
+        sum = 1
+    else:
+        sum = 0
+
+    score = models.IntegerField(default= sum,null=False, blank=False)
+
     
     #ath = athletics.
     if (athletics == True):
@@ -44,3 +56,14 @@ class Nominee(models.Model):
     def __str__(self):
         """this sets the default return for this object"""
         return self.first_name + ' ' + self.last_name
+
+
+
+
+
+
+
+
+
+
+        
