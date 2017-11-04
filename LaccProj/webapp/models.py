@@ -8,7 +8,7 @@ class Nominee(models.Model):
     first_name = models.CharField(max_length=100, null=False, blank=False)
     last_name  = models.CharField(max_length=100, null=False, blank=False)
     email = models.CharField(max_length=100, null=False, blank=False)
-    phone = models.IntegerField(null=False, blank=False)
+    phone = models.CharField(max_length=12, null=False, blank=False)
     Do_you_consider_yourself_hispanic = models.BooleanField()
     athletics = models.BooleanField()
     STEM = models.BooleanField()
