@@ -9,7 +9,7 @@ class Nominee(models.Model):
     last_name  = models.CharField(max_length=100, null=False, blank=False) #generates text box input for lastname
     email = models.CharField(max_length=100, null=False, blank=False) #generates text box for email
     phone = models.CharField(max_length=12, null=False, blank=False) #generates text box for phone number, limited to 12 characters
-    gpa = models.IntegerField(default= 0, null=False ,blank=False) #generates text box to take an integer for GPA
+    gpa = models.FloatField(default= 0.0, null=False ,blank=False) #generates text box to take an integer for GPA
     number_of_AP_courses = models.IntegerField(default= 0,null=False, blank=False) #generates text box to take an integer for # of AP courses
     Do_you_consider_yourself_hispanic = models.NullBooleanField(null=True) #generates drop down menu to select yes/no/unknown 
 
