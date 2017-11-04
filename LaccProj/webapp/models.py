@@ -15,6 +15,17 @@ class Nominee(models.Model):
 
     athletics = models.BooleanField() #generates checkbox 
 
+    #gpa_int = float(gpa)
+     #if gpa_int >= 3.91:
+     #    sum = 3
+     #elif gpa_int >= 3.75:
+      #   sum = 2
+     #elif gpa_int >= 3.5:
+     #    sum = 1
+     #else:
+      #   sum = 0
+   # score = models.IntegerField(default= sum,null=False, blank=False)
+
     STEM = models.BooleanField()#generates checkbox
 
     arts = models.BooleanField()#generates checkbox
