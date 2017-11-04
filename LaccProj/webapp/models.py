@@ -15,15 +15,7 @@ class Nominee(models.Model):
 
     athletics = models.BooleanField() #generates checkbox 
 
-
-    if (athletics == True):
-     certificates = models.CharField(max_length=100, null=False, blank=False) 
-
-
     STEM = models.BooleanField()#generates checkbox
-
-    if (STEM == True):
-        Any_Science_Projects_or_Awards_in_these_fields = models.CharField(max_length=200, null=False, blank=False)
 
     arts = models.BooleanField()#generates checkbox
 
