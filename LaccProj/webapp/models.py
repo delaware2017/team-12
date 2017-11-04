@@ -12,37 +12,25 @@ class Nominee(models.Model):
     gpa = models.IntegerField(default= 0, null=False ,blank=False)
     number_of_AP_courses = models.IntegerField(default= 0,null=False, blank=False)
     Do_you_consider_yourself_hispanic = models.NullBooleanField(null=True)
-<<<<<<< HEAD
 
-=======
     athletics = models.BooleanField()
+    #gpa_int = float(gpa)
+    #if gpa_int >= 3.91:
+    #    sum = 3
+    #elif gpa_int >= 3.75:
+     #   sum = 2
+    #elif gpa_int >= 3.5:
+    #    sum = 1
+    #else:
+     #   sum = 0
 
-    if gpa >= 3.91:
-        sum = 3
-    elif gpa >= 3.75:
-        sum = 2
-    elif gpa >= 3.5:
-        sum = 1
-    else:
-        sum = 0
-
-    score = models.IntegerField(default= sum,null=False, blank=False)
+   # score = models.IntegerField(default= sum,null=False, blank=False)
 
     
->>>>>>> 7318f5f3a4a08ff7010d02637af45dc4e224bcbc
     #ath = athletics.
     if (athletics == True):
      certificates = models.CharField(max_length=100, null=False, blank=False)
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-
->>>>>>> b1ce259131a2d0e5493ec3dd5d37587b3397d001
-=======
-
->>>>>>> 62555041329eef6c9851abd618e670d46f73b28c
 
     STEM = models.BooleanField()
 
@@ -64,22 +52,8 @@ class Nominee(models.Model):
     personal_Statement = models.CharField(max_length=7500, null=False, blank=False)
     #student_Accept = models.BooleanField()
     Parent_or_Guardian_Name = models.CharField(max_length=50, null=False, blank=False)
-    Parent_or_Guardian_Accept = models.BooleanField()
+    Parent_or_guardian_accept = models.BooleanField()
 
     def __str__(self):
         """this sets the default return for this object"""
         return self.first_name + ' ' + self.last_name
-<<<<<<< HEAD
-=======
-
-
-
-
-
-
-
-
-
-
-        
->>>>>>> 7318f5f3a4a08ff7010d02637af45dc4e224bcbc
