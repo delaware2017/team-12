@@ -9,8 +9,12 @@ class Nominee(models.Model):
     last_name  = models.CharField(max_length=100, null=False, blank=False)
     email = models.CharField(max_length=100, null=False, blank=False)
     phone = models.CharField(max_length=12, null=False, blank=False)
-    Do_you_consider_yourself_hispanic = models.BooleanField()
+    Do_you_consider_yourself_hispanic = models.NullBooleanField(null=True)
     athletics = models.BooleanField()
+    if (athletics):
+     certificates = models.CharField(max_length=100, null=False, blank=False)
+        
+
     STEM = models.BooleanField()
     arts = models.BooleanField()
     community_service = models.BooleanField()
