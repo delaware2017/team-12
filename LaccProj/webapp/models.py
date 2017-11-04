@@ -5,7 +5,7 @@ from django.db import models
 
 # Create your models here.
 class Nominee(models.Model):
-    
+
     first_name = models.CharField(max_length=100, null=False, blank=False) #generates text box input for firstname
     last_name  = models.CharField(max_length=100, null=False, blank=False) #generates text box input for lastname
     email = models.CharField(max_length=100, null=False, blank=False) #generates text box for email
@@ -16,16 +16,16 @@ class Nominee(models.Model):
     Do_you_consider_yourself_hispanic = models.NullBooleanField(null=True) #generates drop down menu to select yes/no/unknown 
     athletics = models.BooleanField() #generates checkbox 
 
-    #gpa_int = float(gpa)
-     #if gpa_int >= 3.91:
-     #    sum = 3
-     #elif gpa_int >= 3.75:
-      #   sum = 2
-     #elif gpa_int >= 3.5:
-     #    sum = 1
-     #else:
-      #   sum = 0
-   # score = models.IntegerField(default= sum,null=False, blank=False)
+    
+    #if gpa >= 3.91:
+    #      sum = 3
+    # elif gpa >= 3.75:
+    #      sum = 2
+    # elif gpa >= 3.5:
+    #      sum = 1
+    # else:
+    #      sum = 0 
+    #score = models.IntegerField(default= sum,null=False, blank=False)
 
     STEM = models.BooleanField()#generates checkbox
 
