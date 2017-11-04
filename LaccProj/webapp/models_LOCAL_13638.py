@@ -9,27 +9,10 @@ class Nominee(models.Model):
     last_name  = models.CharField(max_length=100, null=False, blank=False)
     email = models.CharField(max_length=100, null=False, blank=False)
     phone = models.CharField(max_length=12, null=False, blank=False)
-    gpa = models.IntegerField(default= 0, null=False ,blank=False)
+    gpa = models.CharField(max_length=4, null=False, default = " ",blank=False)
     number_of_AP_courses = models.IntegerField(default= 0,null=False, blank=False)
     Do_you_consider_yourself_hispanic = models.NullBooleanField(null=True)
-<<<<<<< HEAD
 
-=======
-    athletics = models.BooleanField()
-
-    if gpa >= 3.91:
-        sum = 3
-    elif gpa >= 3.75:
-        sum = 2
-    elif gpa >= 3.5:
-        sum = 1
-    else:
-        sum = 0
-
-    score = models.IntegerField(default= sum,null=False, blank=False)
-
-    
->>>>>>> 7318f5f3a4a08ff7010d02637af45dc4e224bcbc
     #ath = athletics.
     if (athletics == True):
      certificates = models.CharField(max_length=100, null=False, blank=False)
@@ -69,17 +52,3 @@ class Nominee(models.Model):
     def __str__(self):
         """this sets the default return for this object"""
         return self.first_name + ' ' + self.last_name
-<<<<<<< HEAD
-=======
-
-
-
-
-
-
-
-
-
-
-        
->>>>>>> 7318f5f3a4a08ff7010d02637af45dc4e224bcbc
